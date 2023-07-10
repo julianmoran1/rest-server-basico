@@ -4,7 +4,7 @@ import cors from 'cors'
 import { router } from './routes/user.routes.js'
 
 const app = express()
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 const apiRoute = "/api/usuarios"
 
 //define la carpeta pública
