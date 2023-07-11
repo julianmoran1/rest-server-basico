@@ -2,10 +2,13 @@ import express from 'express'
 import 'dotenv/config'
 import cors from 'cors'
 import { router } from './routes/user.routes.js'
+import { dbConnection } from './database/config.db.js'
+import { connect } from 'mongoose'
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 const apiRoute = "/api/usuarios"
+dbConnection()
 
 //define la carpeta pública
 app.use(express.static('public'))
